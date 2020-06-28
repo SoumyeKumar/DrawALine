@@ -20,13 +20,13 @@ if (Input.GetMouseButtonDown(0))
  Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 if(Physics.Raycast(ray , out hit, 100.0f))
  {
- deleteArea(hit.triangleIndex);
+ DeleteArea(hit.triangleIndex);
  }
  
  }
  }
  
-void deleteArea(int index)
+void DeleteArea(int index)
  {
  Destroy(this.gameObject.GetComponent<MeshCollider>());
  Mesh mesh = transform.GetComponent<MeshFilter>().mesh;
